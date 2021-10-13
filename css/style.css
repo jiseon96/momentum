@@ -51,6 +51,7 @@ img {
 
 #weather span {
   font-style: italic;
+  font-size: 15px;
   opacity: 0.8;
 }
 
@@ -58,7 +59,7 @@ img {
   position: flex;
   margin-top: 170px;
   margin-bottom: 0;
-  font-size: 150px;
+  font-size: 170px;
   color: white;
   text-align: center;
 }
@@ -70,7 +71,7 @@ img {
 }
 
 #login-form input:first-child {
-  width: 350px;
+  width: 400px;
   height: 55px;
   margin: 21px;
   font-size: 40px;
@@ -87,19 +88,23 @@ img {
 }
 
 #todo-form input:first-child {
-  width: 200px;
+  width: 300x;
   height: 45px;
-  font-size: 20px;
+  font-size: 27px;
 }
 
 #todo-form input:first-child::placeholder {
   text-align: center;
   color: white;
-  font-size: 20px;
+  font-size: 27px;
 }
 
 #todo-list {
   list-style: none;
+}
+
+#todo-list li span {
+  font-size: 20px;
 }
 
 #quotes {
@@ -110,5 +115,5 @@ img {
 }
 
 #quotes span {
-  font-size: 10px;
+  font-size: 15px;
 }
