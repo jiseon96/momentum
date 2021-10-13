@@ -7,11 +7,10 @@ function geoSuccess(posititon) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weatherAPI = document.querySelector("#weather");
-      const weather = weatherAPI.querySelector("span:first-child");
-      const city = weatherAPI.querySelector("span:last-child");
-      city.innerText = data.name;
-      weather.innerText = data.weather[0].main;
+      const weather = document.querySelector("#weather span:first-child");
+      const city = document.querySelector("#weather span:last-child");
+      weather.innerText = ` ${data.main.temp}° `;
+      city.innerText = `${data.name} , `;
     });
 }
 

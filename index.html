@@ -5,40 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <script src="js/greetings.js" defer></script>
     <script src="js/clock.js" defer></script>
     <script src="js/quotes.js" defer></script>
     <script src="js/background.js" defer></script>
     <script src="js/todo.js" defer></script>
     <script src="js/weather.js" defer></script>
-
     <title>MOMENTUM APP</title>
   </head>
   <body>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <h1 id="clock"></h1>
     <form id="login-form" class="hidden">
       <input
         type="text"
         required
         maxlength="15"
         placeholder="What is your name?"
+        onfocus='this.placeholder=""'
       />
-      <input type="submit" value="login" />
+      <input type="submit" value="login" class="hidden" />
     </form>
+    <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
       <input
         type="text"
-        placeholder="Write a To Do and Press Enter "
+        placeholder="Write a To Do here"
         required
+        onfocus='this.placeholder=""'
       />
     </form>
     <ul id="todo-list"></ul>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
     <div id="quotes">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
       <span></span>
       <span></span>
     </div>

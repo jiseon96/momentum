@@ -23,7 +23,7 @@ function paintList(newTodoObj) {
   const span = document.createElement("span");
   const button = document.createElement("button");
   span.innerText = newTodoObj.text;
-  button.innerText = `❌`;
+  button.innerText = `X`;
   li.appendChild(span);
   li.appendChild(button);
   todoList.appendChild(li);
