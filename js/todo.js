@@ -13,13 +13,16 @@ function savedTodoList() {
 function handleDeleteInput(event) {
   const li = event.target.parentElement;
   li.remove();
+  todos = todos.filter((item) => item.id !== parseInt(li.id));
+  savedTodoList();
 }
 
-function paintList(todoInputValue) {
+function paintList(newTodoObj) {
   const li = document.createElement("li");
+  li.id = newTodoObj.id;
   const span = document.createElement("span");
   const button = document.createElement("button");
-  span.innerText = `${todoInputValue} `;
+  span.innerText = newTodoObj.text;
   button.innerText = `❌`;
   li.appendChild(span);
   li.appendChild(button);
@@ -31,8 +34,14 @@ function handletodoFormSumbit(event) {
   event.preventDefault();
   const todoInputValue = todoInput.value;
   todoInput.value = "";
-  todos.push(todoInputValue);
-  paintList(todoInputValue);
+
+  const newTodoObj = {
+    id: Date.now(),
+    text: todoInputValue,
+  };
+
+  todos.push(newTodoObj);
+  paintList(newTodoObj);
   savedTodoList();
 }
 
