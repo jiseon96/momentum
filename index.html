@@ -27,6 +27,7 @@
         maxlength="15"
         placeholder="What is your name?"
         onfocus='this.placeholder=""'
+        onblur="this.placeholder = 'What is your name?'"
       />
       <input type="submit" value="login" class="hidden" />
     </form>
@@ -37,6 +38,7 @@
         placeholder="Write a To Do here"
         required
         onfocus='this.placeholder=""'
+        onblur="this.placeholder = 'Write a To Do here'"
       />
     </form>
     <ul id="todo-list"></ul>
